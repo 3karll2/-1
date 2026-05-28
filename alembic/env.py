@@ -5,12 +5,10 @@ from logging.config import fileConfig
 from sqlalchemy.ext.asyncio import create_async_engine
 from alembic import context
 
-# Додаємо корінь проєкту, щоб бачити 'src'
 sys.path.insert(0, os.getcwd())
 
 from src.models import Base
 
-# Налаштування БД
 DATABASE_URL = "sqlite+aiosqlite:///test.db"
 
 config = context.config
@@ -30,6 +28,5 @@ async def run_migrations_online():
         
     await connectable.dispose()
 
-# Запуск асинхронної функції
 if __name__ == "__main__":
     asyncio.run(run_migrations_online())
