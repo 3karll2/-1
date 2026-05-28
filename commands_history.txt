@@ -1,0 +1,8 @@
+Послідовність команд для ЛР2:
+1. git checkout master
+2. Створення файлів Dockerfile, docker-compose.yml, .env
+3. docker compose up --build -d
+4. docker compose ps
+5. docker compose exec web pip list
+6. git add . && git commit
+7. git checkout dev && git merge master
